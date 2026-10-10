@@ -5,11 +5,28 @@ About me
 
 {% load static %}
 
+{% block extra_css %}
+<style>
+  .about-description {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+</style>
+{% endblock %}
 
 {% block content %}
-<section>
-  <div>
-    <img class=" img-fluid mx-auto d-block rounded-circle mt-5"  src="{% static 'img/backpack.png'%}" alt="" >
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <img class="img-fluid mx-auto d-block rounded-circle mt-5" src="{% static 'img/cole.jpg'%}" alt="Cole Smith portrait">
+  </div>
+  <div class="container mt-4">
+    <h1>About my life</h1>
+    <p class="fs-5 about-description">Hello my name is Cole Smith, at 23 years old, I recently completed three years of honorable service in the United States Military. My time in the military instilled in me essential core values, including discipline, teamwork, courage, attention to detail, and above all, deep empathy for others.
+
+As a Signal Support Systems Specialist, I managed communications security (COMSEC) while overseeing the installation, troubleshooting, and maintenance of critical radio and tactical systems. Additionally, I served as an aircraft communications maintainer, ensuring flight line communications remained secure, reliable, and operational. Beyond technical operations, I stepped into leadership roles where I mentored, trained, and led service members to execute tasks efficiently and uphold high operational standards.
+
+Key Improvements Made  </p>
   </div>
 </section>
 {% endblock content %}

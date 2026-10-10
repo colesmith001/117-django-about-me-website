@@ -6,5 +6,29 @@ contact page
 
 
 {% block content %}
-Contact me at 559-919-4260
+<section class="form-control">
+  <h1>Contact me </h1>
+  <form a method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      {{form.name.label_tag}}
+      {{form.name}}
+      {{form.name.errors}}
+    </div>
+    <div class="mb-3">
+      {{form.email.label_tag}}
+      {{form.email}}
+      {{form.email.errors}}
+    </div>
+    <div class="mb-3">
+      {{form.message.label_tag}}
+      {{form.message}}
+      {{form.message.errors}}
+    </div>
+    <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+  </form>
+</section>
+
 {% endblock %}
